@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(190, 119, 119);
+}
+
+.heading{
+    color: rgb(61, 8, 8);
+    text-align: center;
+}
+
+.selectors{
+    text-align: center;
+    
+}
+
+.numbers{
+    
+    height: 20px;
+    padding: 10px;
+
+}
+
+#container{
+    min-height: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    
+}

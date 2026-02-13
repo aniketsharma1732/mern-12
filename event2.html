@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparents{
+            height: 400px;
+            width: 400px;
+            background-color: blueviolet;
+        }
+
+        .parents{
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+
+        }
+
+        .child{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparents">
+        grandparents
+        <div class="parents">
+            parents
+            <div class="child">
+                child
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    // event delegation
+
+
+    const grandparents = document.querySelector(".grandparents")
+    const parents= document.querySelector(".parents")
+    const child= document.querySelector(".child")
+
+    grandparents.addEventListener("click", (e)=>{
+        console.log("grandparents was clicked");
+        e.stopPropagation();
+
+
+    });
+
+    parents.addEventListener("click", (e)=>{
+        console.log("parents was clicked");
+        e.stopPropagation();
+
+        
+    });
+
+    child.addEventListener("click", (e)=>{
+        console.log("child was clicked");
+        e.stopPropagation();
+
+    });
+</script>
+</html>
